@@ -18,6 +18,13 @@ allprojects {
             name = "sonatype"
         }
     }
+
+    tasks.withType<JavaCompile> {
+        // Preserve parameter names in the bytecode
+        options.compilerArgs.add("-parameters")
+    }
+
+
 }
 
 subprojects {
@@ -25,4 +32,6 @@ subprojects {
     tasks.withType<ShadowJar>().configureEach {
         archiveBaseName.set("${rootProject.name}-${project.name}")
     }
+
 }
+

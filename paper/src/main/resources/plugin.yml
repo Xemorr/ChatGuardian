@@ -1,0 +1,18 @@
+name: ChatGuardian
+version: ${version}
+main: me.xemor.chatguardian.ChatGuardian
+api-version: 1.16
+authors: [Xemor_]
+softdepend: []
+folia-supported: true
+description: A customisable local AI chat moderation plugin.
+permissions:
+  chatguardian.reload:
+    description: Allows you to reload the plugin
+    default: op
+  chatguardian.notify:
+    description: Notified when someone sends a bad message
+    default: op
+  chatguardian.alwaysnotify:
+    description: Notified when someone sends a bad message
+    default: op
